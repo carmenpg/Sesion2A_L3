@@ -2,6 +2,11 @@ package test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Esta clase realiza las pruebas unitarias de los metodos de la clase Calculadora.
+ * @author Carmen Pérez
+ */
+
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -17,23 +22,24 @@ class CalculadoraTest {
 
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
-		System.out.println("Before All");
+		System.out.println("Before All: configuracion antes de todas las pruebas");
 	}
 
 	@AfterAll
 	static void tearDownAfterClass() throws Exception {
-		System.out.println("After All");
+		System.out.println("After All: limpieza despues de todas las pruebas");
 	}
 
 	@BeforeEach
 	void setUp() throws Exception {
 		this.valor1 = 5;
 		this.valor2 = 3;
+		System.out.println("->Ejecutando Before each: configuracion antes de cada prueba");
 	}
 
 	@AfterEach
 	void tearDown() throws Exception {
-		System.out.println("After Each");
+		System.out.println("After Each: limpieza despues de cada prueba");
 	}
 
 	@Test
